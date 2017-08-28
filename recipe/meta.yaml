@@ -1,7 +1,7 @@
 {% set name = "python-language-server" %}
-{% set version = "0.1.2" %}
+{% set version = "0.4.2" %}
 {% set hash_type = "sha256" %}
-{% set hash = "7ba71ddcd9e6f008ed37ebe746622e57ce0b61d2142b8f0dedbd84fdb5dd55a7" %}
+{% set hash = "106a6e2f8bb538073be04a87c44cfaca1cdaedec448807c3af13e02cc627e554" %}
 
 package:
   name: {{ name|lower }}
@@ -31,6 +31,7 @@ requirements:
     - pyflakes
     - python
     - yapf
+    - pluggy
 
 test:
   commands:
