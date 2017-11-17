@@ -32,7 +32,7 @@ requirements:
     - python
     - yapf
     - pluggy
-    - rope >= 0.10.5
+    - rope >=0.10.5
 
 test:
   commands:
