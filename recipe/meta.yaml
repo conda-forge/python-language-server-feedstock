@@ -1,37 +1,42 @@
 {% set name = "python-language-server" %}
-{% set version = "0.11.1" %}
+{% set version = "0.19.0" %}
 {% set hash_type = "sha256" %}
-{% set hash = "df27f7112327f671e7679ab8cd3ec29e718f7c80fc49c3d595520525f0186d0f" %}
+{% set hash = "ea40be565429570a318bc010dc8f88250c7bece054880e60704235c3056c6bd8" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/palantir/{{ name }}/archive/{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   {{ hash_type }}: {{ hash }}
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - pyls = pyls.__main__:main
+    # This recipe has pyls entrypoints
 
 requirements:
-  build:
+  host:
     - python
-    - setuptools
+    - pip
   run:
     - configparser  # [py27 or py34]
-    - future
+    - futures       # [py27]     
+    - future >=0.14
     - jedi >=0.10
     - json-rpc
     - pycodestyle
-    - pyflakes
+    - pydocstyle >=2.0.0
+    - pyflakes >=1.6.0
     - python
     - yapf
     - pluggy
+    - autopep8
+    - mccabe
+    - setuptools
     - rope >=0.10.5
 
 test:
@@ -55,3 +60,4 @@ extra:
     - ccordoba12
     - rlaverde
     - andfoy
+    - mariusvniekerk
