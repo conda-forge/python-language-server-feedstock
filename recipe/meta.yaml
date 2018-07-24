@@ -8,8 +8,7 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/palantir/{{ name }}/archive/{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   {{ hash_type }}: {{ hash }}
 
 build:
@@ -20,9 +19,9 @@ build:
     # This recipe has pyls entrypoints
 
 requirements:
-  build:
+  host:
     - python
-    - setuptools
+    - pip
   run:
     - configparser  # [py27 or py34]
     - future >=0.14
