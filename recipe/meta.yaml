@@ -14,9 +14,10 @@ source:
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - pyls = pyls.__main__:main
+    # This recipe has pyls entrypoints
 
 requirements:
   build:
@@ -24,14 +25,17 @@ requirements:
     - setuptools
   run:
     - configparser  # [py27 or py34]
-    - future
+    - future >=0.14
     - jedi >=0.10
     - json-rpc
     - pycodestyle
-    - pyflakes
+    - pydocstyle >=2.0.0
+    - pyflakes >=1.6.0
     - python
     - yapf
     - pluggy
+    - autopep8
+    - mccabe
     - rope >=0.10.5
 
 test:
@@ -55,3 +59,4 @@ extra:
     - ccordoba12
     - rlaverde
     - andfoy
+    - mariusvniekerk
