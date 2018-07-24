@@ -35,6 +35,7 @@ requirements:
     - pluggy
     - autopep8
     - mccabe
+    - setuptools
     - rope >=0.10.5
 
 test:
