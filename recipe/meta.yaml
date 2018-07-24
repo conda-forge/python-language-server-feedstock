@@ -24,6 +24,7 @@ requirements:
     - pip
   run:
     - configparser  # [py27 or py34]
+    - futures       # [py27]     
     - future >=0.14
     - jedi >=0.10
     - json-rpc
