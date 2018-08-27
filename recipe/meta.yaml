@@ -23,11 +23,11 @@ requirements:
     - python
     - pip
   run:
-    - configparser  # [py27 or py34]
+    - configparser  # [py27]
     - futures       # [py27]     
     - future >=0.14
-    - jedi >=0.10
-    - json-rpc
+    - jedi >=0.12
+    - python-jsonrpc-server
     - pycodestyle
     - pydocstyle >=2.0.0
     - pyflakes >=1.6.0
