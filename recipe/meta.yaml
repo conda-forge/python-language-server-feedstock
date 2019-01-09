@@ -27,7 +27,7 @@ requirements:
     - futures       # [py27]     
     - future >=0.14
     - jedi >=0.12
-    - python-jsonrpc-server
+    - python-jsonrpc-server >=0.1.0
     - pycodestyle
     - pydocstyle >=2.0.0
     - pyflakes >=1.6.0
