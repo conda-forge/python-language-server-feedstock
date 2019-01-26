@@ -1,7 +1,7 @@
 {% set name = "python-language-server" %}
-{% set version = "0.21.5" %}
+{% set version = "0.22.0" %}
 {% set hash_type = "sha256" %}
-{% set hash = "28129a2e000f41892a970069f312a3752b39da1dad81e3d899f7c4bedfca4efe" %}
+{% set hash = "46450805798dad2c1abe88cbf66b05db030265b232a5de456d0d3c6800edeb12" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
-  number: 1000
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - pyls = pyls.__main__:main
