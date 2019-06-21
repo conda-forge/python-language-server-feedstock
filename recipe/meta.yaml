@@ -1,7 +1,7 @@
 {% set name = "python-language-server" %}
-{% set version = "0.26.1" %}
+{% set version = "0.27.0" %}
 {% set hash_type = "sha256" %}
-{% set hash = "1a746a4031938df03ee546fa4760895b6a6e420a07d58161b064945add6449ef" %}
+{% set hash = "77c6d043bd4bc7c32f56d80ff12bcd93d341043da89a76bffe3b6fd263ebb165" %}
 
 package:
   name: {{ name|lower }}
@@ -26,7 +26,7 @@ requirements:
     - configparser  # [py27]
     - futures       # [py27]     
     - future >=0.14
-    - jedi >=0.12
+    - jedi >=0.13.2,<0.14
     - python-jsonrpc-server >=0.1.0
     - pycodestyle
     - pydocstyle >=2.0.0
