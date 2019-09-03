@@ -1,7 +1,7 @@
 {% set name = "python-language-server" %}
-{% set version = "0.28.2" %}
+{% set version = "0.28.3" %}
 {% set hash_type = "sha256" %}
-{% set hash = "75f49d5459cc3a498fcea3d2251348564b7af6de74828558d9c7919393c1d020" %}
+{% set hash = "bf172c9c21fc5c2baa293155ddcb27712905f1ea1ebc0ba90985f7fd13039550" %}
 
 package:
   name: {{ name|lower }}
