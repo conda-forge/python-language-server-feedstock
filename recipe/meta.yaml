@@ -39,6 +39,7 @@ requirements:
     - mccabe
     - setuptools
     - rope >=0.10.5
+    - flake8
 
 test:
   commands:
