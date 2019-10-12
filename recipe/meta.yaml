@@ -26,7 +26,7 @@ requirements:
     - configparser  # [py27]
     - futures       # [py27]     
     - future >=0.14
-    - jedi >=0.14.1,<0.15
+    - jedi >=0.15,<0.16
     - python-jsonrpc-server >=0.1.0
     - pycodestyle
     - pydocstyle >=2.0.0
