@@ -1,7 +1,7 @@
 {% set name = "python-language-server" %}
-{% set version = "0.28.3" %}
+{% set version = "0.29.0" %}
 {% set hash_type = "sha256" %}
-{% set hash = "bf172c9c21fc5c2baa293155ddcb27712905f1ea1ebc0ba90985f7fd13039550" %}
+{% set hash = "008a1d4eac857f1b01cea3224503b6656d10833d2e08d6a9da7bde43c55ee33d" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - pyls = pyls.__main__:main
     # This recipe has pyls entrypoints
@@ -26,7 +26,7 @@ requirements:
     - configparser  # [py27]
     - futures       # [py27]     
     - future >=0.14
-    - jedi >=0.14.1,<0.15
+    - jedi >=0.15,<0.16
     - python-jsonrpc-server >=0.1.0
     - pycodestyle
     - pydocstyle >=2.0.0
@@ -39,6 +39,7 @@ requirements:
     - mccabe
     - setuptools
     - rope >=0.10.5
+    - flake8
 
 test:
   commands:
