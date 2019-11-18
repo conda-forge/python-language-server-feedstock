@@ -26,7 +26,7 @@ requirements:
     - future >=0.14  # [py27]
     - backports.functools_lru_cache  # [py27]
     - jedi >=0.14.1,<0.16
-    - python-jsonrpc-server >=0.1.0
+    - python-jsonrpc-server >=0.3.0
     - pycodestyle
     - pydocstyle >=2.0.0
     - pyflakes >=1.6.0
@@ -39,6 +39,7 @@ requirements:
     - setuptools
     - rope >=0.10.5
     - flake8
+    - ujson
 
 test:
   commands:
