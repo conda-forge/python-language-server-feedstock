@@ -1,7 +1,7 @@
 {% set name = "python-language-server" %}
-{% set version = "0.31.1" %}
+{% set version = "0.31.2" %}
 {% set hash_type = "sha256" %}
-{% set hash = "e6b12c20915c70897036810d68378eede3dfafe40aa73ac4d46f5875dc857ca4" %}
+{% set hash = "b8c5540d66afdda64c0811f008d93a79fb847920301681bdcb117a17184f06c7" %}
 
 package:
   name: {{ name|lower }}
@@ -26,7 +26,7 @@ requirements:
     - future >=0.14  # [py27]
     - backports.functools_lru_cache  # [py27]
     - jedi >=0.14.1,<0.16
-    - python-jsonrpc-server >=0.3.0
+    - python-jsonrpc-server >=0.3.2
     - pycodestyle
     - pydocstyle >=2.0.0
     - pyflakes >=1.6.0
