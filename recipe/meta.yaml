@@ -1,7 +1,5 @@
 {% set name = "python-language-server" %}
 {% set version = "0.31.7" %}
-{% set hash_type = "sha256" %}
-{% set hash = "b05786202f91659098a9a7fd34dab76744d5d57956252b6af24a40e29ca41939" %}
 
 package:
   name: {{ name|lower }}
@@ -9,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  {{ hash_type }}: {{ hash }}
+  sha256: b05786202f91659098a9a7fd34dab76744d5d57956252b6af24a40e29ca41939
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - pyls = pyls.__main__:main
@@ -25,7 +23,7 @@ requirements:
     - configparser  # [py27]
     - future >=0.14  # [py27]
     - backports.functools_lru_cache  # [py27]
-    - jedi >=0.14.1,<0.16
+    - jedi >=0.14.1,<0.16.0a0
     - python-jsonrpc-server >=0.3.2
     - pycodestyle
     - pydocstyle >=2.0.0
@@ -39,7 +37,7 @@ requirements:
     - setuptools
     - rope >=0.10.5
     - flake8
-    - ujson
+    - ujson <=1.35
 
 test:
   commands:
@@ -52,7 +50,7 @@ about:
   license_file: LICENSE
   summary: An implementation of the Language Server Protocol for Python
   description: |
-    A Python 2.7 and 3.4+ implementation of the Language Server Protocol 
+    A Python 2.7 and 3.4+ implementation of the Language Server Protocol
     making use of Jedi, pycodestyle, Pyflakes and YAPF.
   dev_url: https://github.com/palantir/python-language-server
 
