@@ -1,5 +1,5 @@
 {% set name = "python-language-server" %}
-{% set version = "0.31.7" %}
+{% set version = "0.31.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b05786202f91659098a9a7fd34dab76744d5d57956252b6af24a40e29ca41939
+  sha256: f5685e1a6a3f6a2529ff75ea0676c59e769024302b2434564a5e7005d056eb82
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - pyls = pyls.__main__:main
