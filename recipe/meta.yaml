@@ -27,7 +27,7 @@ requirements:
     - python-jsonrpc-server >=0.3.2
     - pycodestyle
     - pydocstyle >=2.0.0
-    - pyflakes >=1.6.0
+    - pyflakes >=1.6.0,<2.2.0
     - pylint
     - python
     - yapf
