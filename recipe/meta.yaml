@@ -10,7 +10,7 @@ source:
   sha256: 3702a133100d1540e6789c01f1a183b2668262078fbb17b4d2495f5999e2ba48
 
 build:
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - pyls = pyls.__main__:main
@@ -40,7 +40,10 @@ requirements:
     - ujson <=1.35
 
 test:
+  requires:
+    - pip
   commands:
+    - python -m pip check
     - pyls --help
 
 about:
