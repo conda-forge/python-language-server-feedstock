@@ -23,20 +23,20 @@ requirements:
     - configparser  # [py27]
     - future >=0.14  # [py27]
     - backports.functools_lru_cache  # [py27]
-    - jedi >=0.14.1,<0.16.0a0
+    - jedi >=0.17.0,<0.18.0a0
     - python-jsonrpc-server >=0.3.2
-    - pycodestyle
+    - pycodestyle >=2.6.0,<2.7.0
     - pydocstyle >=2.0.0
-    - pyflakes >=1.6.0,<2.2.0
+    - pyflakes >=2.2.0,<2.3.0
     - pylint
     - python
     - yapf
     - pluggy
     - autopep8
-    - mccabe
+    - mccabe >=0.6.0,<0.7.0
     - setuptools
     - rope >=0.10.5
-    - flake8
+    - flake8 >=3.8.0
     - ujson <=1.35
 
 test:
