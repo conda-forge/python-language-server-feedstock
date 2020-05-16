@@ -23,9 +23,7 @@ requirements:
     - configparser  # [py27]
     - future >=0.14  # [py27]
     - backports.functools_lru_cache  # [py27]
-    # TODO: revert after test
-    # - jedi >=0.17.0,<0.18.0a0
-    - jedi >=0.14.1,<0.16
+    - jedi >=0.17.0,<0.18.0a0
     - python-jsonrpc-server >=0.3.2
     - pycodestyle >=2.6.0,<2.7.0
     - pydocstyle >=2.0.0
