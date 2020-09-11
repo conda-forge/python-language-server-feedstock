@@ -17,19 +17,16 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - configparser  # [py27]
-    - future >=0.14  # [py27]
-    - backports.functools_lru_cache  # [py27]
     - jedi >=0.17.0,<0.18.0a0
-    - python-jsonrpc-server >=0.3.2
+    - python-jsonrpc-server >=0.4.0
     - pycodestyle >=2.6.0,<2.7.0
     - pydocstyle >=2.0.0
     - pyflakes >=2.2.0,<2.3.0
     - pylint
-    - python
+    - python >=3.6
     - yapf
     - pluggy
     - autopep8
@@ -37,7 +34,7 @@ requirements:
     - setuptools
     - rope >=0.10.5
     - flake8 >=3.8.0
-    - ujson <=1.35
+    - ujson >=3.0
 
 test:
   requires:
