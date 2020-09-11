@@ -1,5 +1,5 @@
 {% set name = "python-language-server" %}
-{% set version = "0.34.1" %}
+{% set version = "0.35.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b96ff466b5aa24e212493de863899298f229a9e250e7353972563c7f2495d23d
+  sha256: ac0bbc549b38565aa945b6335cc65c5e7230b8b60417af3bf9df5d1aacb03f90
 
 build:
   number: 0
