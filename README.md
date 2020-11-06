@@ -5,9 +5,11 @@ Home: https://github.com/palantir/python-language-server
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/python-language-server-feedstock/blob/master/LICENSE.txt)
 
 Summary: An implementation of the Language Server Protocol for Python
+
+Development: https://github.com/palantir/python-language-server
 
 A Python 2.7 and 3.4+ implementation of the Language Server Protocol
 making use of Jedi, pycodestyle, Pyflakes and YAPF.
