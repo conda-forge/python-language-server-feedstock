@@ -10,7 +10,7 @@ source:
   sha256: c85d718ef6860319ad59fd6f2acb1166e9349b782ee8e8908e08ecf241615f52
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
@@ -21,12 +21,12 @@ requirements:
     - python >=3.6
     - pip
   run:
-    - jedi >=0.17.0,<0.18.0a0
+    - jedi >=0.17.2,<0.18.0a0
     - python-jsonrpc-server >=0.4.0
     - pycodestyle >=2.6.0,<2.7.0
     - pydocstyle >=2.0.0
     - pyflakes >=2.2.0,<2.3.0
-    - pylint
+    - pylint >=2.5.0
     - python >=3.6
     - yapf
     - pluggy
