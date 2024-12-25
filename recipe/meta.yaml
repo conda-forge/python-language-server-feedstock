@@ -10,7 +10,7 @@ source:
   sha256: 9984c84a67ee2c5102c8e703215f407fcfa5e62b0ae86c9572d0ada8c4b417b0
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
@@ -18,7 +18,7 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
     - jedi >=0.17.2,<0.18.0a0
@@ -27,7 +27,7 @@ requirements:
     - pydocstyle >=2.0.0
     - pyflakes >=2.2.0,<2.3.0
     - pylint >=2.5.0
-    - python >=3.6
+    - python >={{ python_min }}
     - yapf
     - pluggy
     - autopep8
@@ -40,6 +40,7 @@ requirements:
 test:
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - python -m pip check
     - pyls --help
